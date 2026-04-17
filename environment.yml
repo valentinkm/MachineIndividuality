@@ -1,0 +1,48 @@
+# environment.yml — MachineIndividuality
+# Reproduces the conda/micromamba environment for the full analysis pipeline.
+#
+# Install:
+#   micromamba create -f environment.yml
+#   micromamba activate mi_replication
+#
+# Note: vLLM is only required for data generation (src/psychnorms/),
+# not for the analysis pipeline (src/analysis/). It requires a CUDA-capable
+# GPU and should be installed separately in the generation environment:
+#   pip install vllm
+
+name: mi_replication
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # --- Python ---
+  - python=3.11
+
+  # --- Data & Numerics (Python) ---
+  - pandas>=2.1
+  - numpy>=1.26
+  - scipy>=1.12
+  - scikit-learn>=1.4
+  - pyarrow>=15.0
+
+  # --- Plotting (Python) ---
+  - matplotlib>=3.8
+  - seaborn>=0.13
+
+  # --- API (generation only) ---
+  - openai>=1.0
+
+  # --- R ---
+  - r-base=4.4.2
+  - r-data.table>=1.15
+  - r-lme4>=1.1.35
+  - r-ggplot2>=3.5
+  - r-dplyr>=1.1
+  - r-tidyr>=1.3
+  - r-stringr>=1.5
+  - r-viridis>=0.6
+  - r-patchwork>=1.2
+  - r-gridextra>=2.3
+  - r-arrow>=15.0

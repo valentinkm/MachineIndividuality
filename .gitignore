@@ -1,0 +1,48 @@
+*.csv
+*.jsonl
+*.log
+__pycache__
+.DS_Store
+.Rhistory
+
+# Ignore content but keep dirs
+logs/*
+!logs/.gitkeep
+
+outputs/*
+!outputs/.gitkeep
+!outputs/results/**/*.png
+!outputs/results/**/*.pdf
+!outputs/results/**/*.svg
+!outputs/results/**/*.jpg
+outputs/raw_behavior/*
+!outputs/raw_behavior/.gitkeep
+outputs/raw_behavior/model_norms/*
+!outputs/raw_behavior/model_norms/.gitkeep
+
+data/*
+!data/.gitkeep
+
+# Secrets
+env_secrets.sh
+
+# Resources (whitelisted)
+!resources/psychNorms_vocab.csv
+!resources/norm_scales.csv
+
+# Environment dirs (should never be committed)
+renv/
+venv/
+
+# Quarto build artifacts (keep .qmd source + .pdf output)
+supplementary/si.tex
+supplementary/*_files/
+supplementary/.quarto/
+supplementary/*.quarto_ipynb
+
+
+.agent
+.agents/
+paper/
+norms_paper/
+publication_plots

@@ -1,0 +1,15 @@
+norm,min_value,max_value,scale_type,valid_values
+arousal_warriner,1,9,discrete,"1,2,3,4,5,6,7,8,9"
+concreteness_brysbaert,1,5,discrete,"1,2,3,4,5"
+valence_mohammad,-3,3,continuous,
+visual_lancaster,0,5,discrete,"0,1,2,3,4,5"
+auditory_lancaster,0,5,discrete,"0,1,2,3,4,5"
+gustatory_lancaster,0,5,discrete,"0,1,2,3,4,5"
+olfactory_lancaster,0,5,discrete,"0,1,2,3,4,5"
+haptic_lancaster,0,5,discrete,"0,1,2,3,4,5"
+aoa_kuperman,1,99,continuous,
+aoa_brysbaert,4,16,discrete,"4,6,8,10,12,13,16"
+morality_troche,1,7,discrete,"1,2,3,4,5,6,7"
+gender_association_glasgow,1,7,discrete,"1,2,3,4,5,6,7"
+humor_engelthaler,1,5,discrete,"1,2,3,4,5"
+socialness_diveica,1,7,discrete,"1,2,3,4,5,6,7"
