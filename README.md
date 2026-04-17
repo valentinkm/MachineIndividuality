@@ -30,11 +30,11 @@ This repository generates psycholinguistic word ratings from 10 open-weight LLMs
 | Qwen3-235B-A22B | 235B (22B active) | Alibaba |
 | Mistral-Small-24B | 24B | Mistral AI |
 | gemma-3-27b-it | 27B | Google |
-| gpt-oss-20b | 20B | OpenAI |
-| gpt-oss-120b | 120B | OpenAI |
+| gpt-oss-20b | 21B (3.6B active) | OpenAI |
+| gpt-oss-120b | 117B (5.1B active) | OpenAI |
 | OLMo-3.1-32B | 32B | Allen AI |
 | Falcon-H1-34B | 34B | TII |
-| granite-4.0-h-small | ~8B | IBM |
+| granite-4.0-h-small | 32B (9B active) | IBM |
 | phi-4 | 14B | Microsoft |
 
 ## Norms (14)

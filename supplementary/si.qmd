@@ -37,8 +37,7 @@ execute:
 We selected 10 open-weight large language models spanning a broad range of
 architectural implementations and parameter scales. All models are
 instruction-tuned variants; they were accessed via offline vLLM inference on
-NVIDIA H200 GPUs (141 GB HBM each). Unless noted otherwise, models were served
-at native precision (BF16/FP16).
+NVIDIA H200 GPUs (141 GB HBM each).
 
 **Qwen3-32B** (Alibaba; 32B parameters; `Qwen/Qwen3-32B`). Dense transformer.
 Qwen3 dense models ship with seamless switching between thinking and
