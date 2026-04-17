@@ -70,7 +70,7 @@ micromamba activate mi_replication
 
 ### Step 1: Data Generation
 
-> **Note:** This step requires a CUDA-capable GPU with vLLM installed. Pre-generated data is available upon request.
+> **Note:** This step requires a CUDA-capable GPU with vLLM installed. The raw behavioral data of all models is available on OSF: [10.17605/OSF.IO/T9S3M](https://doi.org/10.17605/OSF.IO/T9S3M).
 
 ```bash
 # Deterministic (T=0, 1 rep per cue×norm)
