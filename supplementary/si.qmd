@@ -46,7 +46,7 @@ non-thinking modes; thinking was disabled at inference via the
 rather than extended chain-of-thought reasoning that would interfere with
 response parsing.
 
-**Qwen3-235B-A22B** (Alibaba; 235B total / 22B active parameters; `Qwen/Qwen3-235B-A22B-Instruct-2507`). Mixture-of-experts (MoE) architecture. The largest model in the sample by total parameter count. Served across N GPUs with tensor parallelism. Thinking disabled as above.
+**Qwen3-235B-A22B** (Alibaba; 235B total / 22B active parameters; `Qwen/Qwen3-235B-A22B-Instruct-2507`). Mixture-of-experts (MoE) architecture. The largest model in the sample by total parameter count. Thinking disabled as above.
 
 **Mistral-Small-24B-Instruct-2501** (Mistral AI; 24B parameters;
 `mistralai/Mistral-Small-24B-Instruct-2501`). Dense transformer.
@@ -370,7 +370,7 @@ Raw model outputs were postprocessed by a unified pipeline:
 4. **Repetition cap.** Stochastic repetitions were capped at 5 per (model, norm, word) tuple.
 5. **Effective validity.** An observation was marked as effectively valid if it was parseable, within scale, and not flagged by any prior exclusion step.
 
-After exclusion, the overall invalid/outlier rate was low (<3% per norm, mean <0.5%), and approximately 5.3 million valid observations per norm entered the LMM analysis (~74.6 million total across 14 norms).
+After exclusion, the overall invalid/outlier rate was low (<3% per norm, mean <0.5%), and approximately 5.4 million valid observations per norm entered the LMM analysis (~74.9 million total across 14 norms).
 
 
 # Variance Decomposition — Model Specification {#sec-lmm}
@@ -397,7 +397,7 @@ To test whether the observed idiosyncrasy variance $\sigma^2_\iota$ exceeds what
 
 The $p$-value for each norm is the proportion of null iterations where $\sigma^2_{\iota,\text{null}} \geq \sigma^2_{\iota,\text{observed}}$.
 
-Each simulation iteration was run on the full dataset (~5.3M observations per norm across 10 models), preserving the complete crossed design without subsampling. Simulations were parallelized across norms (14 concurrent workers, 2 cores each) on a 128-core, 500 GB RAM Linux server.
+Each simulation iteration was run on the full dataset (~5.4M observations per norm across 10 models), preserving the complete crossed design without subsampling. Simulations were parallelized across norms (14 concurrent workers, 2 cores each) on a 128-core, 500 GB RAM Linux server.
 
 
 # Cross-Norm Specificity {#sec-specificity}
@@ -445,7 +445,7 @@ The analysis pipeline was executed on a 128-core, 500 GB RAM Linux server. A mas
 - Python 3.11, pandas $\geq$ 2.1, numpy $\geq$ 1.26, scipy $\geq$ 1.12, scikit-learn $\geq$ 1.4, pyarrow $\geq$ 15.0
 - R 4.4.2, lme4 [@Bates2015] v1.1-38, data.table $\geq$ 1.15, arrow $\geq$ 15.0
 
-A full environment specification for conda/micromamba is provided in the repository. All analysis code and supporting datasets are available at <https://github.com/valentinkm/MachineIndividuality>.
+A full environment specification for conda/micromamba is provided in the repository. All analysis code and supporting datasets are available at <https://github.com/valentinkm/MachineIndividuality>. The raw behavioral data of all models can be found on OSF: <https://doi.org/10.17605/OSF.IO/T9S3M>.
 
 
 # References {.unnumbered}
